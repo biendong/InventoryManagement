@@ -1,0 +1,2 @@
+# InventoryManagement
+Exercise for JavaWeb
