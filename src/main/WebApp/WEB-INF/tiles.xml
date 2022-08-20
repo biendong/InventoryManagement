@@ -35,4 +35,9 @@
         <put-attribute name="body" value="/WEB-INF/pages/profile.jsp" />
     </definition>
 
+<definition name="listcategory" extends="base.definition">
+        <put-attribute name="title" value="List Category Page" />
+        <put-attribute name="body" value="/WEB-INF/pages/listcategory.jsp" />
+    </definition>
+    
 </tiles-definitions>

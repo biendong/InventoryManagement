@@ -1,16 +1,16 @@
 package vn.nashtech.inventory.web.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import vn.nashtech.inventory.web.model.Category;
 import vn.nashtech.inventory.web.model.User;
-
-import java.util.List;
 
 @Controller
 public class HomeController {
@@ -58,4 +58,26 @@ public class HomeController {
         return  "listuser";
     }
 
+    @GetMapping ("/listcategory")
+    public String listcategory (Model model) throws JsonProcessingException {
+        String rs;
+        rs= rest.getForObject("http://localhost:8091/category/listCategory", String.class);
+        List<Category> listCategory = obj.readValue(rs, new TypeReference<List<Category>>() {
+            @Override public int compareTo(TypeReference<List<Category>> o) {
+                return super.compareTo(o);
+            }
+        });
+        model.addAttribute("listofcategory",listCategory);
+        return  "listcategory";
+    }
+    
+    @GetMapping ("/create")
+    public String updatecategory (Model model){
+      return  "createcategory";
+  }
+    
+    @GetMapping ("/delete/{id}")
+    public String deletecategory (Model model){
+      return  "listcategory";
+  }
 }

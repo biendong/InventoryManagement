@@ -48,9 +48,6 @@ public class User implements UserDetails {
         this.lastName = lastName;
     }
 
-    public void setUserName(String userName) {
-        this.username = username;
-    }
     public String getPassword() {
         return password;
     }
@@ -59,9 +56,6 @@ public class User implements UserDetails {
         return username;
     }
 
-//    public String getUserName() {
-//        return userName;
-//    }
 
     @Override public boolean isAccountNonExpired() {
         return true;
@@ -82,13 +76,4 @@ public class User implements UserDetails {
     public void setPassword(String password) {
         this.password = password;
     }
-
-    //    private String fullName;
-//    private String email;
-//    private String phoneNumber;
-//    private int avatar;
-//    private String role;
-//    private String createdDate;
-//    private String modifiedDate;
-//    private String lastUsed;
 }

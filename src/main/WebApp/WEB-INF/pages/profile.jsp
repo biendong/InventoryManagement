@@ -36,13 +36,7 @@
                 </div>
             </div>
                 <div class="row mt-3">
-                    <div class="col-md-12">
-                        <label class="labels">Phone Number</label>
-                        <input type="text" class="form-control" placeholder="Enter phone number" value=""></div>
-                    <div class="col-md-12">
-                        <label class="labels">Address</label>
-                        <input type="text" class="form-control" placeholder="Enter address" value="">
-                    </div>
+                   
                     <div class="col-md-12">
                         <label class="labels">Email Address</label>
                         <input type="text" class="form-control" value="${principal.email}" placeholder="Enter email address">

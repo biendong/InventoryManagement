@@ -97,7 +97,7 @@
              data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Managements:</h6>
-                <a class="collapse-item" href="test">Category</a>
+                <a class="collapse-item" href="listcategory">Category</a>
                 <a class="collapse-item" href="test">Product</a>
 
             </div>
